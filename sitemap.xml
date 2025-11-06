@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- PAGE CHÍNH -->
+  <url>
+    <loc>https://shophn.github.io/chothuexemayohanoi/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- DATASETS / TXT -->
+  <url>
+    <loc>https://shophn.github.io/chothuexemayohanoi/data/gia_thue_chung.txt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://shophn.github.io/chothuexemayohanoi/data/xe_so.txt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://shophn.github.io/chothuexemayohanoi/data/xe_ga.txt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>httpsophn.github.io/chothuexemayohanoi/data/xe_dien.txt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://shophn.github.io/chothuexemayohanoi/data/xe_con_tay.txt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://shophn.github.io/chothuexemayohanoi/data/xe_50cc.txt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://shophn.github.io/chothuexemayohanoi/data/honda.txt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://shophn.github.io/chothuexemayohanoi/data/yamaha.txt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://shophn.github.io/chothuexemayohanoi/data/thu_tuc.txt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://shophn.github.io/chothuexemayohanoi/data/dat_coc.txt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://shophn.github.io/chothuexemayohanoi/data/giao_xe.txt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
