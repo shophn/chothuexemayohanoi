@@ -17,7 +17,7 @@
     viOnly: true,
     extraSites: [location.origin],
     crawlDepth: 1,
-    refreshHours: 24,
+    refreshHours: 0.01,
     maxPagesPerDomain: 50,
     maxTotalPages: 180,
     fetchTimeoutMs: 9000,
