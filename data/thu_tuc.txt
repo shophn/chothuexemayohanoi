@@ -1,0 +1,135 @@
+Thủ tục thuê xe máy tại ShopHN được thiết kế đơn giản, nhanh chóng và rõ ràng để khách hàng dễ dàng hoàn tất trong vài phút. Dưới đây là toàn bộ hướng dẫn chi tiết về giấy tờ, điều kiện bằng lái, quy trình giao – nhận xe và các lưu ý quan trọng khi thuê xe máy tại Hà Nội. Nội dung này áp dụng cho toàn bộ các loại xe: xe số, xe ga, xe côn tay, xe 50cc, xe điện và một số dòng cao cấp.
+
+1. THỦ TỤC CHUNG – ÁP DỤNG CHO MỌI KHÁCH
+
+Thủ tục cơ bản của ShopHN gồm 2 phần:
+• Giấy tờ tuỳ thân  
+• Tiền đặt cọc (tuỳ loại xe)
+
+Giấy tờ tuỳ thân có thể là:
+• CCCD gắn chip  
+• Hộ chiếu (passport)  
+• Giấy phép lái xe (dùng để đối chiếu)  
+• KT3 hoặc giấy tạm trú (nếu có)
+
+Khi khách thuê xe, ShopHN chỉ giữ 1 giấy tờ bản gốc: thường là CCCD hoặc hộ chiếu. Nếu khách không muốn để lại giấy tờ vì lý do công việc, cần xử lý cá nhân hoặc không tiện giao giấy tờ, khách có thể chọn hình thức:
+• Không để giấy tờ → tăng cọc thêm 500.000đ (tùy loại xe)
+
+Hình thức này thường được khách du lịch hoặc khách đi công việc ngắn hạn sử dụng vì tiện lợi và không ảnh hưởng lịch trình.
+
+2. QUY ĐỊNH BẰNG LÁI – RẤT QUAN TRỌNG
+
+Đối với xe từ 50cc trở lên, khách hàng **bắt buộc cần có bằng lái xe phù hợp**.
+
+Quy định cụ thể:
+• Xe số, xe ga, xe côn tay 110cc – 125cc – 150cc: cần bằng lái xe A1  
+• Xe trên 175cc (nếu có): bằng lái A2  
+• Xe 50cc: không cần bằng lái  
+• Xe điện: không cần bằng lái  
+
+Tất cả xe trên 50cc đều thuộc phạm vi quản lý của luật giao thông Việt Nam. Việc yêu cầu bằng lái giúp đảm bảo an toàn và hạn chế rủi ro. ShopHN chỉ yêu cầu khách xuất trình bằng lái để đối chiếu, **không giữ bằng lái của khách**.
+
+Trong trường hợp khách không có bằng lái:
+• ShopHN khuyến khích khách thuê **xe 50cc** hoặc **xe điện**, vừa hợp pháp vừa an toàn.  
+• Mức cọc vẫn áp dụng theo từng loại xe nhưng có thể linh hoạt hơn.  
+
+3. TRƯỜNG HỢP KHÁCH KHÔNG CÓ BẰNG LÁI – GIẢI PHÁP CHI TIẾT
+
+Nhiều khách thuê xe lần đầu hoặc khách nước ngoài không có bằng lái hợp lệ tại Việt Nam. ShopHN có 2 giải pháp:
+
+• Giải pháp 1: Thuê xe 50cc  
+Không cần bằng lái, chạy an toàn trong phố, phù hợp khách mới tập chạy.  
+Mức cọc 1.000.000 – 2.000.000đ.  
+
+• Giải pháp 2: Thuê xe điện  
+Không yêu cầu bằng lái, rất dễ điều khiển, nhẹ và tiết kiệm chi phí.  
+Mức cọc 1.500.000 – 3.000.000đ.  
+
+• Giải pháp 3: Nếu khách vẫn muốn thuê xe từ 110cc – 150cc  
+ShopHN yêu cầu:  
+– Giấy tờ gốc (CCCD/hộ chiếu)  
+– Cọc tăng thêm (tuỳ loại xe, có thể +1.000.000đ so với mức cọc bình thường)  
+– Khách cam kết chỉ di chuyển nội thành, không đi xa hoặc đi đèo
+
+Tuy nhiên, giải pháp 1 và 2 vẫn là lựa chọn phù hợp nhất.
+
+4. ĐẶT CỌC – GẦN GIỐNG QUY ĐỊNH TRONG FILE dat_coc.txt
+
+Mức cọc chung theo nhóm xe:
+• Xe số: 2.000.000 – 3.000.000  
+• Xe ga phổ thông: 2.500.000 – 4.000.000  
+• Air Blade: 3.000.000 – 4.000.000  
+• Honda Vision: 4.000.000 – 5.000.000  
+• Xe côn tay: 3.000.000 – 6.000.000  
+• Xe điện: 1.500.000 – 3.000.000  
+• Xe 50cc: 1.000.000 – 2.000.000  
+
+Không để lại giấy tờ → tăng cọc thêm 500.000đ.
+
+Tất cả mức cọc đều hoàn trả 100% khi khách trả xe đúng trạng thái ban đầu.
+
+5. QUY TRÌNH NHẬN XE – CHỤP XE – XÁC NHẬN TÌNH TRẠNG
+
+Để đảm bảo minh bạch, ShopHN thực hiện quy trình giao xe rõ ràng:
+1. Chụp ảnh xe trước khi giao (phanh, lốp, đèn, thân vỏ)  
+2. Ghi lại mức xăng và số km hiện tại  
+3. Khách kiểm tra xe và chạy test nếu cần  
+4. Ký xác nhận giao nhận xe  
+
+Quy trình này giúp tránh hiểu nhầm khi trả xe và đảm bảo sự yên tâm cho cả khách và ShopHN.
+
+6. QUY TRÌNH TRẢ XE – HOÀN CỌC
+
+Khi trả xe:
+• Nhân viên kiểm tra lại phanh, đèn, còi, gương, thân xe  
+• Đối chiếu ảnh trước khi giao  
+• Nếu xe không hỏng hóc → hoàn cọc ngay  
+• Nếu có hư hỏng nhỏ → báo giá rõ ràng  
+• Tuyệt đối không ép khách, không thu quá giá thực tế  
+
+ShopHN cam kết minh bạch 100%, sửa chữa tại nơi uy tín và gửi hóa đơn nếu khách yêu cầu.
+
+7. LƯU Ý CHO KHÁCH THUÊ LẦN ĐẦU
+
+ShopHN tổng hợp những lưu ý để khách thuê xe lần đầu dễ dàng hơn:
+• Mang theo CCCD hoặc hộ chiếu để làm thủ tục nhanh  
+• Nếu thuê xe từ 110cc trở lên → cần bằng lái A1  
+• Nếu thuê xe theo tháng → có thể giảm cọc  
+• Nếu thuê xe 10 ngày trở lên → ShopHN hỗ trợ giao xe tận nơi  
+• Nếu đi tỉnh hoặc đi phượt → nên chọn xe số hoặc xe côn tay  
+• Khách nữ nên chọn Vision, Lead hoặc Grande cho dễ chạy  
+• Khách không rành chạy xe ga → chọn xe số hoặc xe 50cc để an toàn  
+
+8. THỦ TỤC CHO KHÁCH NƯỚC NGOÀI
+
+Khách nước ngoài được phép thuê xe khi có:
+• Passport  
+• Bằng lái quốc tế (IDP) phù hợp  
+• Hoặc bằng lái nước ngoài có giá trị tại Việt Nam  
+
+Nếu khách không có bằng hợp lệ:
+• ShopHN hướng dẫn thuê xe điện hoặc xe 50cc  
+• Mức cọc linh hoạt tùy trường hợp  
+
+9. TÓM TẮT THỦ TỤC NHANH – DỄ HIỂU
+
+• Bước 1: Chuẩn bị CCCD hoặc Passport  
+• Bước 2: Chuẩn bị bằng lái (nếu định thuê xe trên 50cc)  
+• Bước 3: Đặt cọc theo từng loại xe  
+• Bước 4: Ký nhận xe – chụp ảnh – kiểm tra  
+• Bước 5: Trả xe – hoàn cọc trong 1 phút  
+
+Quy trình tất cả chỉ mất 2–3 phút, không phức tạp, rất linh hoạt và dễ làm.
+
+10. MỤC ĐÍCH CỦA VIỆC CẦN BẰNG LÁI
+
+• Giúp khách lái xe đúng luật  
+• Tránh bị công an phạt khi đi đường  
+• Đảm bảo an toàn trong quá trình chạy xe  
+• Giúp ShopHN có cơ sở xử lý hợp đồng thuê xe an toàn hơn  
+
+Nếu khách không có bằng lái mà vẫn chạy xe trên 50cc – rủi ro rất lớn. Vì vậy ShopHN luôn ưu tiên khách lựa chọn xe phù hợp như xe điện hoặc 50cc.
+
+KẾT LUẬN
+
+Thủ tục thuê xe tại ShopHN được tối giản tối đa, chỉ cần giấy tờ – cọc – bằng lái (đối với xe trên 50cc). Nếu khách không muốn để giấy tờ hoặc không có bằng lái, ShopHN luôn có giải pháp phù hợp như tăng cọc hoặc chuyển sang xe điện/50cc. Mục tiêu cuối cùng của ShopHN là đảm bảo an toàn cho khách, xe đúng nhu cầu và giao dịch minh bạch – nhanh – thuận tiện cho tất cả mọi người.
