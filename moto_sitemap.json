@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "version": "1.0",
+    "lastUpdate": "2025-11-06",
+    "description": "Sitemap cho MotoAI – hỗ trợ AutoLearn cho Landing Page thuê xe máy Hà Nội (ShopHN)."
+  },
+  "categories": {
+    "pages": {
+      "type": "html",
+      "description": "Trang chính của website",
+      "list": [
+        "https://shophn.github.io/chothuexemayohanoi/"
+      ]
+    },
+    "datasets": {
+      "type": "txt",
+      "description": "Dữ liệu chuyên sâu để AI học và trả lời khách thuê xe",
+      "list": [
+        "https://shophn.github.io/chothuexemayohanoi/data/gia_thue_chung.txt",
+        "https://shophn.github.io/chothuexemayohanoi/data/xe_so.txt",
+        "https://shophn.github.io/chothuexemayohanoi/data/xe_ga.txt",
+        "https://shophn.github.io/chothuexemayohanoi/data/xe_dien.txt",
+        "https://shophn.github.io/chothuexemayohanoi/data/xe_con_tay.txt",
+        "https://shophn.github.io/chothuexemayohanoi/data/xe_50cc.txt",
+        "https://shophn.github.io/chothuexemayohanoi/data/honda.txt",
+        "https://shophn.github.io/chothuexemayohanoi/data/yamaha.txt",
+        "https://shophn.github.io/chothuexemayohanoi/data/thu_tuc.txt",
+        "https://shophn.github.io/chothuexemayohanoi/data/dat_coc.txt"
+      ]
+    }
+  },
+  "training": {
+    "mode": "incremental",
+    "autoRefresh": "48h",
+    "preferredFormat": "txt+utf8",
+    "enableSpellFix": true,
+    "enableAdaptiveLearn": true
+  },
+  "publisher": {
+    "name": "ShopHN – Thuê xe máy Hà Nội",
+    "website": "https://shophn.github.io/chothuexemayohanoi/",
+    "contact": "0942 467 674",
+    "keywords": [
+      "thuê xe máy",
+      "thuê xe máy Hà Nội",
+      "xe ga",
+      "xe số",
+      "xe côn tay",
+      "xe 50cc",
+      "giao xe tận nơi"
+    ]
+  }
+}
