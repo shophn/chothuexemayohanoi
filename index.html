@@ -911,6 +911,83 @@
             width: 20px;
             text-align: center;
         }
+        
+        /* ======================================= */
+        /* ✅ CSS CHO BẢNG GIÁ MỚI */
+        /* ======================================= */
+        .table-responsive-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            padding: 15px;
+            /* Thêm border-radius để hợp với card glass */
+            border-radius: var(--radius-main); 
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+            /* Đảm bảo bảng không bị tràn */
+            min-width: 600px; 
+        }
+        
+        .price-table th,
+        .price-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            /* Thêm độ trong suốt cho văn bản để hợp với nền glass */
+            /* color: var(--text-secondary); */
+        }
+        
+        .price-table th {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        
+        .price-table thead {
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .price-table tbody tr {
+            transition: background-color 0.2s ease;
+        }
+        
+        /* Tạo hiệu ứng hover nhẹ cho nền */
+        .price-table tbody tr:hover {
+            background-color: rgba(127, 127, 127, 0.1);
+        }
+        
+        .price-table tbody tr td:first-child {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        .price-table tbody tr td:first-child strong {
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        /* Xóa viền cho dòng cuối */
+        .price-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        @media (max-width: 767px) {
+            .price-table {
+                font-size: 0.9rem;
+            }
+            .price-table th,
+            .price-table td {
+                padding: 10px 8px;
+            }
+        }
+        /* ======================================= */
+        /* ✅ HẾT CSS CHO BẢNG GIÁ MỚI */
+        /* ======================================= */
+
 
         /* Section: FAQ (Đã tối ưu) */
         .faq-list {
@@ -1485,6 +1562,51 @@
                     <h2 class="scroll-anim">Bảng giá thuê xe máy Hà Nội</h2>
                     <p class="subtitle" style="text-align: center; max-width: 600px; margin: -10px auto 40px auto; color: var(--text-secondary);">Giá tốt, áp dụng từ 9h - 21h. Liên hệ 0942 467 674 để có giá tốt nhất.</p>
                     
+                    <div class="table-responsive-wrapper card glass scroll-anim" style="margin-bottom: 40px;">
+                        <h3 style="text-align: center; margin-top: 15px; font-size: 1.4rem;">Bảng giá tóm tắt</h3>
+                        <table class="price-table">
+                            <thead>
+                                <tr>
+                                    <th>Loại xe</th>
+                                    <th>Giá theo ngày</th>
+                                    <th>Giá theo tuần</th>
+                                    <th>Giá theo tháng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Xe số</strong> (Wave, Sirius...)</td>
+                                    <td>140.000đ – 180.000đ</td>
+                                    <td>600.000đ – 900.000đ</td>
+                                    <td>1.000.000đ – 1.400.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Xe tay ga</strong> (Vision, Air Blade...)</td>
+                                    <td>150.000đ – 200.000đ</td>
+                                    <td>700.000đ – 1.000.000đ</td>
+                                    <td>1.200.000đ – 2.000.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Xe điện</strong> (VinFast, Yadea...)</td>
+                                    <td>150.000đ – 170.000đ</td>
+                                    <td>700.000đ – 800.000đ</td>
+                                    <td>1.400.000đ – 1.600.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Xe 50cc</strong> (Không cần bằng)</td>
+                                    <td>150.000đ – 200.000đ</td>
+                                    <td>700.000đ – 850.000đ</td>
+                                    <td>1.600.000đ – 1.700.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Xe côn tay</strong> (Exciter, Winner...)</td>
+                                    <td>200.000đ – 300.000đ</td>
+                                    <td>900.000đ – 1.200.000đ</td>
+                                    <td>1.700.000đ – 2.000.000đ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="price-grid">
                         <div class="price-card card card-tilt scroll-anim">
                             <h3>Xe số</h3>
