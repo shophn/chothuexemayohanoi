@@ -148,7 +148,6 @@
    <!-- SEO META TAGS TỐI ƯU -->
    <title>Thuê Xe Máy Hà Nội | Thuê Xe Máy Nguyễn Tú</title>
    <meta name="description" content="Dịch vụ thuê xe máy Hà Nội uy tín, giao xe tận nơi 15 phút. Thuê xe máy Nguyễn Tú cung cấp xe số, xe ga chất lượng, giá từ 150k. Thủ tục đơn giản, hỗ trợ 24/7.">
-   <meta name="keywords" content="thuê xe máy hà nội, thuê xe máy nguyễn tú, thuê xe máy tại hà nội, dịch vụ thuê xe máy hà nội, thuê xe máy long biên, thuê xe máy sân bay nội bài, giá thuê xe máy hà nội">
    <meta name="author" content="Nguyễn Tú Motorbike Rental">
    <link rel="canonical" href="https://shophn.github.io/chothuexemayohanoi/" />
    <link rel="icon" href="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/cropped-Thue-xe-may-min-1-1.png" type="image/png">
@@ -205,6 +204,12 @@
            box-sizing: border-box;
            margin: 0;
            padding: 0;
+       }
+       
+       /* Bổ sung outline focus-visible cho accessibility */
+       :focus-visible {
+           outline: 2px solid var(--accent);
+           outline-offset: 2px;
        }
 
        html {
@@ -343,7 +348,7 @@
            min-height: 100vh;
        }
 
-       #main-content {
+       #maincontent {
            flex-grow: 1;
            padding-top: 70px;
        }
@@ -549,7 +554,7 @@
            #app-header {
                padding: 10px 40px;
            }
-           #main-content {
+           #maincontent {
                padding-top: 80px; 
            }
        }
@@ -1466,7 +1471,7 @@
    </style>
 </head>
 <body>
-   <a href="#main-content" class="skip-link sr-only sr-only-focusable">Đi tới nội dung chính</a>
+   <a href="#maincontent" class="skip-link sr-only sr-only-focusable">Bỏ qua đến nội dung chính</a>
 
    <div id="app-wrapper">
        
@@ -1485,8 +1490,8 @@
            </nav>
            
            <button id="menu-toggle" aria-controls="mobile-nav" aria-label="Mở menu" aria-expanded="false">
-               <span class="material-symbols-rounded icon-menu">menu</span>
-               <span class="material-symbols-rounded icon-close">close</span>
+               <span class="material-symbols-rounded icon-menu" aria-hidden="true">menu</span>
+               <span class="material-symbols-rounded icon-close" aria-hidden="true">close</span>
            </button>
        </header>
        
@@ -1500,7 +1505,7 @@
            <a href="#bao-mat">Bảo mật</a>
        </nav>
 
-       <main id="main-content">
+       <main id="maincontent">
            
            <!-- HERO SECTION: H1 TỐI ƯU TỪ KHÓA CHÍNH -->
            <section id="trang-chu">
@@ -1510,28 +1515,28 @@
                    
                    <div class="cta-buttons">
                        <a href="#bang-gia" class="btn">
-                           <i class="fa-solid fa-motorcycle"></i> Xem bảng giá ngay
+                           <i class="fa-solid fa-motorcycle" aria-hidden="true"></i> Xem bảng giá ngay
                        </a>
                        <a href="tel:0942467674" class="btn btn-secondary dynamic-tel" id="hero-call-btn">
-                           <span class="material-symbols-rounded">call</span> Gọi đặt xe: 0942 467 674
+                           <span class="material-symbols-rounded" aria-hidden="true">call</span> Gọi đặt xe: 0942 467 674
                        </a>
                    </div>
                    
                    <div class="service-grid">
                        <a href="#bang-gia" class="card glass service-card card-tilt">
-                           <span class="material-symbols-rounded">two_wheeler</span>
+                           <span class="material-symbols-rounded" aria-hidden="true">two_wheeler</span>
                            <span>Xe số 150k</span>
                        </a>
                        <a href="#bang-gia" class="card glass service-card card-tilt">
-                           <span class="material-symbols-rounded">scooter</span>
+                           <span class="material-symbols-rounded" aria-hidden="true">scooter</span>
                            <span>Xe ga 200k</span>
                        </a>
                        <a href="#bang-gia" class="card glass service-card card-tilt">
-                           <span class="material-symbols-rounded">sports_motorsports</span>
+                           <span class="material-symbols-rounded" aria-hidden="true">sports_motorsports</span>
                            <span>Xe côn 250k</span>
                        </a>
                        <a href="#lien-he" class="card glass service-card card-tilt">
-                           <span class="material-symbols-rounded">flight_takeoff</span>
+                           <span class="material-symbols-rounded" aria-hidden="true">flight_takeoff</span>
                            <span>Giao Sân Bay</span>
                        </a>
                    </div>
@@ -1553,28 +1558,28 @@
                    
                    <div class="features-grid scroll-anim">
                        <div class="feature-item card glass">
-                           <span class="material-symbols-rounded">map</span>
+                           <span class="material-symbols-rounded" aria-hidden="true">map</span>
                            <div>
                                <h4>Vị trí thuận lợi</h4>
                                <p>Nằm tại 112 Nguyễn Văn Cừ, trung tâm Long Biên, dễ dàng đi chuyển đến AEON Mall, sân Golf Long Biên và trung tâm Phố Cổ Hà Nội.</p>
                            </div>
                        </div>
                        <div class="feature-item card glass">
-                           <span class="material-symbols-rounded">payments</span>
+                           <span class="material-symbols-rounded" aria-hidden="true">payments</span>
                            <div>
                                <h4>Giá thuê minh bạch</h4>
                                <p>Cam kết không phí ẩn. Giá niêm yết rõ ràng trong <a href="#bang-gia">bảng giá thuê xe máy</a> của chúng tôi. Giảm giá cho khách thuê tuần/tháng.</p>
                            </div>
                        </div>
                        <div class="feature-item card glass">
-                           <span class="material-symbols-rounded">support_agent</span>
+                           <span class="material-symbols-rounded" aria-hidden="true">support_agent</span>
                            <div>
                                <h4>Hỗ trợ sự cố 24/7</h4>
                                <p>Đội ngũ kỹ thuật viên luôn trực chiến để hỗ trợ bạn mọi lúc mọi nơi trên địa bàn Hà Nội.</p>
                            </div>
                        </div>
                        <div class="feature-item card glass">
-                           <span class="material-symbols-rounded">verified_user</span>
+                           <span class="material-symbols-rounded" aria-hidden="true">verified_user</span>
                            <div>
                                <h4>Thủ tục đơn giản</h4>
                                <p>Chỉ cần CCCD gắn chip và Giấy phép lái xe. Không cần đặt cọc tiền mặt lớn.</p>
@@ -1641,9 +1646,9 @@
                            <div class="price-tag">150K <span>/ ngày</span></div>
                            <p>(Honda Wave, Yamaha Sirius...)</p>
                            <ul class="price-features">
-                               <li><i class="fa-solid fa-check"></i> Tiết kiệm xăng tối đa</li>
-                               <li><i class="fa-solid fa-check"></i> Nhẹ nhàng, dễ điều khiển</li>
-                               <li><i class="fa-solid fa-check"></i> Phù hợp sinh viên, phượt thủ</li>
+                               <li><i class="fa-solid fa-check" aria-hidden="true"></i> Tiết kiệm xăng tối đa</li>
+                               <li><i class="fa-solid fa-check" aria-hidden="true"></i> Nhẹ nhàng, dễ điều khiển</li>
+                               <li><i class="fa-solid fa-check" aria-hidden="true"></i> Phù hợp sinh viên, phượt thủ</li>
                            </ul>
                            <a href="#contact-form" class="btn btn-secondary dynamic-tel">Đặt xe này</a>
                        </div>
@@ -1653,9 +1658,9 @@
                            <div class="price-tag">200K <span>/ ngày</span></div>
                            <p>(Vision, Air Blade, Lead...)</p>
                            <ul class="price-features">
-                               <li><i class="fa-solid fa-check"></i> Cốp rộng để đồ thoải mái</li>
-                               <li><i class="fa-solid fa-check"></i> Vận hành êm ái, sang trọng</li>
-                               <li><i class="fa-solid fa-check"></i> Tặng kèm 2 áo mưa, mũ BH</li>
+                               <li><i class="fa-solid fa-check" aria-hidden="true"></i> Cốp rộng để đồ thoải mái</li>
+                               <li><i class="fa-solid fa-check" aria-hidden="true"></i> Vận hành êm ái, sang trọng</li>
+                               <li><i class="fa-solid fa-check" aria-hidden="true"></i> Tặng kèm 2 áo mưa, mũ BH</li>
                            </ul>
                            <a href="#contact-form" class="btn dynamic-tel">Đặt xe ngay</a>
                        </div>
@@ -1665,9 +1670,9 @@
                            <div class="price-tag">250K <span>/ ngày</span></div>
                            <p>(Exciter 150, Winner V1/X...)</p>
                            <ul class="price-features">
-                               <li><i class="fa-solid fa-check"></i> Động cơ mạnh mẽ</li>
-                               <li><i class="fa-solid fa-check"></i> Phù hợp đường trường</li>
-                               <li><i class="fa-solid fa-check"></i> Kiểm tra kỹ thuật trước giao</li>
+                               <li><i class="fa-solid fa-check" aria-hidden="true"></i> Động cơ mạnh mẽ</li>
+                               <li><i class="fa-solid fa-check" aria-hidden="true"></i> Phù hợp đường trường</li>
+                               <li><i class="fa-solid fa-check" aria-hidden="true"></i> Kiểm tra kỹ thuật trước giao</li>
                            </ul>
                            <a href="#contact-form" class="btn btn-secondary dynamic-tel">Đặt xe này</a>
                        </div>
@@ -1682,7 +1687,7 @@
                        <div class="faq-item card-tilt">
                            <div class="faq-question">
                                <h4>Tôi muốn thuê xe máy ở Hà Nội nhưng trả xe ở Sân Bay được không?</h4>
-                               <span class="material-symbols-rounded">add</span>
+                               <span class="material-symbols-rounded" aria-hidden="true">add</span>
                            </div>
                            <div class="faq-answer">
                                <p>Hoàn toàn được! Thuê xe máy Nguyễn Tú cung cấp dịch vụ linh hoạt. Bạn có thể nhận xe tại cửa hàng 112 Nguyễn Văn Cừ, Long Biên và trả xe tại Sân bay Nội Bài (có phụ phí nhỏ hỗ trợ nhân viên đi lại). Vui lòng xem chi tiết tại mục <a href="#chinh-sach">chính sách trả xe</a>.</p>
@@ -1692,7 +1697,7 @@
                        <div class="faq-item card-tilt">
                            <div class="faq-question">
                                <h4>Thủ tục thuê xe máy cần những giấy tờ gì?</h4>
-                               <span class="material-symbols-rounded">add</span>
+                               <span class="material-symbols-rounded" aria-hidden="true">add</span>
                            </div>
                            <div class="faq-answer">
                                <p>Để đảm bảo nhanh gọn, bạn chỉ cần chuẩn bị:
@@ -1706,7 +1711,7 @@
                        <div class="faq-item card-tilt">
                            <div class="faq-question">
                                <h4>Xe có sẵn mũ bảo hiểm và áo mưa không?</h4>
-                               <span class="material-symbols-rounded">add</span>
+                               <span class="material-symbols-rounded" aria-hidden="true">add</span>
                            </div>
                            <div class="faq-answer">
                                <p>Có. Mỗi xe thuê tại Nguyễn Tú đều đi kèm 02 mũ bảo hiểm đạt chuẩn (sạch sẽ, được vệ sinh thường xuyên) và 02 áo mưa mỏng để bạn sẵn sàng đối phó với thời tiết tại Hà Nội.</p>
@@ -1716,7 +1721,7 @@
                        <div class="faq-item card-tilt">
                            <div class="faq-question">
                                <h4>Cửa hàng có giao xe tận nơi tại Hà Nội không?</h4>
-                               <span class="material-symbols-rounded">add</span>
+                               <span class="material-symbols-rounded" aria-hidden="true">add</span>
                            </div>
                            <div class="faq-answer">
                                <p>Chúng tôi miễn phí giao xe trong bán kính 3km quanh khu vực Nguyễn Văn Cừ, Ngọc Lâm, Bồ Đề (Long Biên). Với các khu vực xa hơn hoặc giao sang Phố Cổ, chúng tôi tính phí ship hỗ trợ xăng xe cho nhân viên rất rẻ.</p>
@@ -1735,27 +1740,27 @@
                            <p>Đừng để vấn đề đi lại làm hỏng chuyến đi của bạn. Hãy liên hệ <strong>dịch vụ thuê xe máy Hà Nội - Nguyễn Tú</strong> ngay hôm nay để giữ chiếc xe tốt nhất.</p>
                            <ul>
                                <li>
-                                   <span class="material-symbols-rounded">location_on</span>
+                                   <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
                                    <span id="contact-address">CS1: 112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội</span>
                                </li>
                                <li>
-                                   <span class="material-symbols-rounded">storefront</span>
+                                   <span class="material-symbols-rounded" aria-hidden="true">storefront</span>
                                    <span>CS2: Đối Tác Ngõ Hài Tượng, Hàng Buồm, Hoàn Kiếm (Phố Cổ)</span>
                                </li>
                                <li>
-                                   <span class="material-symbols-rounded">call</span>
+                                   <span class="material-symbols-rounded" aria-hidden="true">call</span>
                                    <a href="tel:0942467674" class="dynamic-tel" id="contact-phone">0942 467 674 (Mr. Tú)</a>
                                </li>
                                <li>
-                                   <span class="material-symbols-rounded">support_agent</span>
+                                   <span class="material-symbols-rounded" aria-hidden="true">support_agent</span>
                                    <a href="https://zalo.me/0942467674" class="dynamic-zalo" id="contact-zalo" target="_blank" rel="noopener noreferrer">Chat Zalo: 0942 467 674</a>
                                </li>
                                <li>
-                                   <span class="material-symbols-rounded">mail</span>
+                                   <span class="material-symbols-rounded" aria-hidden="true">mail</span>
                                    <a href="mailto:thuexemaynguyentu@gmail.com" class="dynamic-email" id="contact-email">thuexemaynguyentu@gmail.com</a>
                                </li>
                                <li>
-                                   <span class="material-symbols-rounded">schedule</span>
+                                   <span class="material-symbols-rounded" aria-hidden="true">schedule</span>
                                    <span>Giờ phục vụ: 24/7 (Vui lòng gọi trước nếu đến sau 22h)</span>
                                </li>
                            </ul>
@@ -1828,32 +1833,32 @@
                        <h4>Thuê Xe Máy Nguyễn Tú</h4>
                        <p>Chuyên cung cấp dịch vụ thuê xe máy Hà Nội uy tín, chuyên nghiệp. Đối tác tin cậy cho mọi hành trình khám phá thủ đô.</p>
                        <ul class="footer-link-list">
-                           <li><a href="tel:0942467674" class="dynamic-tel"><i class="fa-solid fa-phone icon"></i> 0942 467 674</a></li>
-                           <li><a href="mailto:thuexemaynguyentu@gmail.com" class="dynamic-email"><i class="fa-solid fa-envelope icon"></i> thuexemaynguyentu@gmail.com</a></li>
-                           <li><a href="#lien-he" class="no-hover"><i class="fa-solid fa-location-dot icon"></i> 112 Nguyễn Văn Cừ, Long Biên, Hà Nội</a></li>
+                           <li><a href="tel:0942467674" class="dynamic-tel"><i class="fa-solid fa-phone icon" aria-hidden="true"></i> 0942 467 674</a></li>
+                           <li><a href="mailto:thuexemaynguyentu@gmail.com" class="dynamic-email"><i class="fa-solid fa-envelope icon" aria-hidden="true"></i> thuexemaynguyentu@gmail.com</a></li>
+                           <li><a href="#lien-he" class="no-hover"><i class="fa-solid fa-location-dot icon" aria-hidden="true"></i> 112 Nguyễn Văn Cừ, Long Biên, Hà Nội</a></li>
                        </ul>
                    </div>
                    
                    <div class="footer-col col-2">
                        <h4>Danh mục chính</h4>
                        <ul class="footer-link-list">
-                           <li><a href="#trang-chu"><i class="fa-solid fa-chevron-right icon-nav"></i> Trang chủ</a></li>
-                           <li><a href="#gioi-thieu"><i class="fa-solid fa-chevron-right icon-nav"></i> Giới thiệu</a></li>
-                           <li><a href="#bang-gia"><i class="fa-solid fa-chevron-right icon-nav"></i> Bảng giá thuê xe</a></li>
-                           <li><a href="#faq"><i class="fa-solid fa-chevron-right icon-nav"></i> Hỏi đáp (FAQ)</a></li>
-                           <li><a href="#lien-he"><i class="fa-solid fa-chevron-right icon-nav"></i> Liên hệ đặt xe</a></li>
+                           <li><a href="#trang-chu"><i class="fa-solid fa-chevron-right icon-nav" aria-hidden="true"></i> Trang chủ</a></li>
+                           <li><a href="#gioi-thieu"><i class="fa-solid fa-chevron-right icon-nav" aria-hidden="true"></i> Giới thiệu</a></li>
+                           <li><a href="#bang-gia"><i class="fa-solid fa-chevron-right icon-nav" aria-hidden="true"></i> Bảng giá thuê xe</a></li>
+                           <li><a href="#faq"><i class="fa-solid fa-chevron-right icon-nav" aria-hidden="true"></i> Hỏi đáp (FAQ)</a></li>
+                           <li><a href="#lien-he"><i class="fa-solid fa-chevron-right icon-nav" aria-hidden="true"></i> Liên hệ đặt xe</a></li>
                        </ul>
                    </div>
                    
                    <div class="footer-col col-3">
                        <h4>Liên kết hữu ích</h4>
                        <ul class="footer-link-list">
-                           <li><a href="#chinh-sach"><i class="fa-solid fa-chevron-right icon-nav"></i> Điều khoản dịch vụ</a></li>
-                           <li><a href="#bao-mat"><i class="fa-solid fa-chevron-right icon-nav"></i> Chính sách bảo mật</a></li>
-                           <li><a href="https://thuexemaynguyentu.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe icon-nav"></i> Website chính thức</a></li>
-                           <li><a href="https://m.facebook.com/groups/thuexemayhanoikococ/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook icon-nav"></i> Cộng đồng thuê xe</a></li>
-                           <li><a href="https://www.youtube.com/channel/UCvUBwV24U4c5-q1iJ-ZL0Rg" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube icon-nav"></i> Video hướng dẫn</a></li>
-                           <li><a href="https://www.tripadvisor.com.vn/Attraction_Review-g21333608-d9826317-Reviews-Nguyen_Tu_Motorbike_Rental-Long_Bien_Hanoi.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-pin icon-nav"></i> Đánh giá TripAdvisor</a></li>
+                           <li><a href="#chinh-sach"><i class="fa-solid fa-chevron-right icon-nav" aria-hidden="true"></i> Điều khoản dịch vụ</a></li>
+                           <li><a href="#bao-mat"><i class="fa-solid fa-chevron-right icon-nav" aria-hidden="true"></i> Chính sách bảo mật</a></li>
+                           <li><a href="https://thuexemaynguyentu.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe icon-nav" aria-hidden="true"></i> Website chính thức</a></li>
+                           <li><a href="https://m.facebook.com/groups/thuexemayhanoikococ/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook icon-nav" aria-hidden="true"></i> Cộng đồng thuê xe</a></li>
+                           <li><a href="https://www.youtube.com/channel/UCvUBwV24U4c5-q1iJ-ZL0Rg" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube icon-nav" aria-hidden="true"></i> Video hướng dẫn</a></li>
+                           <li><a href="https://www.tripadvisor.com.vn/Attraction_Review-g21333608-d9826317-Reviews-Nguyen_Tu_Motorbike_Rental-Long_Bien_Hanoi.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-pin icon-nav" aria-hidden="true"></i> Đánh giá TripAdvisor</a></li>
                        </ul>
                    </div>
                    
@@ -1863,8 +1868,8 @@
                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.90153927641!2d105.8673820759082!3d21.03666508061413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aa66718d719b%3A0x6231add54f0284d7!2zMTEyIE5ndXnhu4VuIFbEg24gQ-G7qSwgTmfhu41jIEzDom0sIExvbmcgQmnDqm4sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1730876404285!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bản đồ Nguyễn Tú Motorbike"></iframe>
                        </div>
                         <ul class="footer-link-list" style="margin-top: 15px;">
-                           <li><a href="https://motoopen.github.io/chothuexemayhanoi/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link icon-nav"></i> Hệ thống Hà Nội</a></li>
-                           <li><a href="https://motoopen.github.io/thuexemayohoankiem/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link icon-nav"></i> Chi nhánh Hoàn Kiếm</a></li>
+                           <li><a href="https://motoopen.github.io/chothuexemayhanoi/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link icon-nav" aria-hidden="true"></i> Hệ thống Hà Nội</a></li>
+                           <li><a href="https://motoopen.github.io/thuexemayohoankiem/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link icon-nav" aria-hidden="true"></i> Chi nhánh Hoàn Kiếm</a></li>
                        </ul>
                    </div>
                </div>
@@ -1877,19 +1882,19 @@
 
        <footer id="app-footer">
            <a href="#trang-chu" class="footer-link">
-               <span class="material-symbols-rounded">home</span>
+               <span class="material-symbols-rounded" aria-hidden="true">home</span>
                <span>Trang chủ</span>
            </a>
            <a href="#bang-gia" class="footer-link">
-               <span class="material-symbols-rounded">price_check</span>
+               <span class="material-symbols-rounded" aria-hidden="true">price_check</span>
                <span>Bảng giá</span>
            </a>
            <a href="tel:0942467674" class="footer-link dynamic-tel">
-               <span class="material-symbols-rounded">call</span>
+               <span class="material-symbols-rounded" aria-hidden="true">call</span>
                <span>Gọi ngay</span>
            </a>
            <a href="https://zalo.me/0942467674" class="footer-link dynamic-zalo" target="_blank" rel="noopener noreferrer">
-               <i class="fa-solid fa-comment-dots" style="font-size: 20px;"></i>
+               <i class="fa-solid fa-comment-dots" style="font-size: 20px;" aria-hidden="true"></i>
                <span>Zalo</span>
            </a>
        </footer>
@@ -1898,20 +1903,20 @@
    
    <!-- Floating Action Buttons -->
    <a href="tel:0942467674" id="quick-call-right" class="quick-call-button dynamic-tel" aria-label="Gọi điện thoại ngay">
-       <span class="material-symbols-rounded">call</span>
+       <span class="material-symbols-rounded" aria-hidden="true">call</span>
    </a>
    
    <a href="https://zalo.me/0942467674" id="quick-call-left" class="quick-call-button dynamic-zalo" target="_blank" rel="noopener noreferrer" aria-label="Chat Zalo ngay">
-       <i class="fa-brands fa-rocketchat"></i>
+       <i class="fa-brands fa-rocketchat" aria-hidden="true"></i>
    </a>
    
    <button id="scroll-to-top" aria-label="Cuộn lên đầu trang">
-       <span class="material-symbols-rounded">arrow_upward</span>
+       <span class="material-symbols-rounded" aria-hidden="true">arrow_upward</span>
    </button>
    
    <!-- Style Selector UI -->
    <button id="style-selector-toggle" aria-controls="style-selector-wrapper" aria-expanded="false" aria-label="Tùy chỉnh giao diện">
-       <span class="material-symbols-rounded">palette</span>
+       <span class="material-symbols-rounded" aria-hidden="true">palette</span>
    </button>
    <div id="style-selector-wrapper" class="card glass">
        <div class="style-selector-header">
@@ -1920,35 +1925,35 @@
        </div>
        <div class="style-selector-grid">
            <div class="theme-card" data-theme="UltraTitanGlass">
-               <span class="material-symbols-rounded">dark_mode</span>
+               <span class="material-symbols-rounded" aria-hidden="true">dark_mode</span>
                <span>Titan Glass</span>
            </div>
            <div class="theme-card" data-theme="NeoMint">
-               <span class="material-symbols-rounded">eco</span>
+               <span class="material-symbols-rounded" aria-hidden="true">eco</span>
                <span>Neo Mint</span>
            </div>
            <div class="theme-card" data-theme="MidnightPurple">
-               <span class="material-symbols-rounded">nightlife</span>
+               <span class="material-symbols-rounded" aria-hidden="true">nightlife</span>
                <span>Midnight Purple</span>
            </div>
            <div class="theme-card" data-theme="AeroGlassBlue">
-               <span class="material-symbols-rounded">airwave</span>
+               <span class="material-symbols-rounded" aria-hidden="true">airwave</span>
                <span>Aero Glass</span>
            </div>
            <div class="theme-card" data-theme="MinimalWhite">
-               <span class="material-symbols-rounded">light_mode</span>
+               <span class="material-symbols-rounded" aria-hidden="true">light_mode</span>
                <span>Minimal White</span>
            </div>
            <div class="theme-card" data-theme="SunsetOrange">
-               <span class="material-symbols-rounded">wb_sunny</span>
+               <span class="material-symbols-rounded" aria-hidden="true">wb_sunny</span>
                <span>Sunset Orange</span>
            </div>
            <div class="theme-card" data-theme="FacebookUltra">
-               <span class="material-symbols-rounded">thumb_up</span>
+               <span class="material-symbols-rounded" aria-hidden="true">thumb_up</span>
                <span>Facebook Ultra</span>
            </div>
            <div class="theme-card" data-theme="MotoDarkCarbon">
-               <span class="material-symbols-rounded">construction</span>
+               <span class="material-symbols-rounded" aria-hidden="true">construction</span>
                <span>Dark Carbon</span>
            </div>
        </div>
