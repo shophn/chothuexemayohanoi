@@ -206,10 +206,31 @@
            padding: 0;
        }
        
-       /* Bổ sung outline focus-visible cho accessibility */
-       :focus-visible {
-           outline: 2px solid var(--accent);
-           outline-offset: 2px;
+       /* Bổ sung outline focus-visible cho accessibility - Đã Fix */
+       a:focus-visible,
+       button:focus-visible,
+       input:focus-visible,
+       textarea:focus-visible {
+           outline: 3px solid #ffb020 !important;
+           outline-offset: 3px !important;
+       }
+
+       /* Fix Skip Link Accessibility */
+       .skip-link {
+           position: absolute;
+           left: -9999px;
+           top: auto;
+       }
+       .skip-link:focus, .skip-link:focus-visible {
+           left: 10px;
+           top: 10px;
+           z-index: 9999;
+           background-color: var(--accent);
+           color: #fff;
+           padding: 10px 15px;
+           border-radius: calc(var(--radius-main) / 2);
+           font-weight: bold;
+           text-decoration: none;
        }
 
        html {
@@ -1038,7 +1059,7 @@
            }
        }
 
-       /* FAQ Section */
+       /* FAQ Section - Đã Fix Accessibility Button */
        .faq-list {
            max-width: 800px;
            margin: 0 auto;
@@ -1063,6 +1084,12 @@
            padding: 20px 25px;
            cursor: pointer;
            background: var(--bg-secondary);
+           /* Reset button styles để giống hệt bản cũ */
+           width: 100%;
+           border: none;
+           text-align: left;
+           font-family: inherit;
+           color: inherit;
        }
        
        .faq-question h4 {
@@ -1422,34 +1449,6 @@
        @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
        @keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
        
-       .sr-only {
-           position: absolute;
-           width: 1px;
-           height: 1px;
-           padding: 0;
-           margin: -1px;
-           overflow: hidden;
-           clip: rect(0, 0, 0, 0);
-           white-space: nowrap;
-           border: 0;
-       }
-
-       .sr-only-focusable:focus, .sr-only-focusable:focus-visible {
-           position: static;
-           width: auto;
-           height: auto;
-           padding: 10px;
-           margin: 0;
-           overflow: visible;
-           clip: auto;
-           white-space: normal;
-           background: var(--accent);
-           color: #fff;
-           z-index: 9999;
-           display: block;
-           text-align: center;
-       }
-       
        /* 10. Responsive Design */
        @media (min-width: 768px) {
            h1 { font-size: 3rem; }
@@ -1471,7 +1470,8 @@
    </style>
 </head>
 <body>
-   <a href="#maincontent" class="skip-link sr-only sr-only-focusable">Bỏ qua đến nội dung chính</a>
+   <!-- Fix Skip Link -->
+   <a href="#maincontent" class="skip-link">Bỏ qua đến nội dung chính</a>
 
    <div id="app-wrapper">
        
@@ -1596,13 +1596,14 @@
                    
                    <div class="table-responsive-wrapper card glass scroll-anim" style="margin-bottom: 40px;">
                        <h3 style="text-align: center; margin-top: 15px; font-size: 1.4rem;">Bảng giá chi tiết theo loại xe</h3>
+                       <!-- Fix Table Accessibility -->
                        <table class="price-table">
                            <thead>
                                <tr>
-                                   <th>Dòng xe</th>
-                                   <th>Giá ngày (1-3 ngày)</th>
-                                   <th>Giá tuần (7 ngày)</th>
-                                   <th>Giá tháng</th>
+                                   <th scope="col">Dòng xe</th>
+                                   <th scope="col">Giá ngày (1-3 ngày)</th>
+                                   <th scope="col">Giá tuần (7 ngày)</th>
+                                   <th scope="col">Giá tháng</th>
                                </tr>
                            </thead>
                            <tbody>
@@ -1684,22 +1685,24 @@
                <div class="container">
                    <h2 class="scroll-anim">Câu Hỏi Thường Gặp Về Thuê Xe Máy Hà Nội</h2>
                    <div class="faq-list scroll-anim">
+                       
+                       <!-- Fix FAQ Accessibility (button, aria-expanded, aria-controls, unique ID) -->
                        <div class="faq-item card-tilt">
-                           <div class="faq-question">
+                           <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
                                <h4>Tôi muốn thuê xe máy ở Hà Nội nhưng trả xe ở Sân Bay được không?</h4>
                                <span class="material-symbols-rounded" aria-hidden="true">add</span>
-                           </div>
-                           <div class="faq-answer">
+                           </button>
+                           <div id="faq-answer-1" class="faq-answer">
                                <p>Hoàn toàn được! Thuê xe máy Nguyễn Tú cung cấp dịch vụ linh hoạt. Bạn có thể nhận xe tại cửa hàng 112 Nguyễn Văn Cừ, Long Biên và trả xe tại Sân bay Nội Bài (có phụ phí nhỏ hỗ trợ nhân viên đi lại). Vui lòng xem chi tiết tại mục <a href="#chinh-sach">chính sách trả xe</a>.</p>
                            </div>
                        </div>
                        
                        <div class="faq-item card-tilt">
-                           <div class="faq-question">
+                           <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
                                <h4>Thủ tục thuê xe máy cần những giấy tờ gì?</h4>
                                <span class="material-symbols-rounded" aria-hidden="true">add</span>
-                           </div>
-                           <div class="faq-answer">
+                           </button>
+                           <div id="faq-answer-2" class="faq-answer">
                                <p>Để đảm bảo nhanh gọn, bạn chỉ cần chuẩn bị:
                                    <br>1. Căn cước công dân (CCCD) gắn chip hoặc Hộ chiếu (Passport) bản gốc.
                                    <br>2. Giấy phép lái xe (Bằng lái xe) tương ứng với loại hình xe muốn thuê.
@@ -1709,24 +1712,25 @@
                        </div>
 
                        <div class="faq-item card-tilt">
-                           <div class="faq-question">
+                           <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
                                <h4>Xe có sẵn mũ bảo hiểm và áo mưa không?</h4>
                                <span class="material-symbols-rounded" aria-hidden="true">add</span>
-                           </div>
-                           <div class="faq-answer">
+                           </button>
+                           <div id="faq-answer-3" class="faq-answer">
                                <p>Có. Mỗi xe thuê tại Nguyễn Tú đều đi kèm 02 mũ bảo hiểm đạt chuẩn (sạch sẽ, được vệ sinh thường xuyên) và 02 áo mưa mỏng để bạn sẵn sàng đối phó với thời tiết tại Hà Nội.</p>
                            </div>
                        </div>
                        
                        <div class="faq-item card-tilt">
-                           <div class="faq-question">
+                           <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
                                <h4>Cửa hàng có giao xe tận nơi tại Hà Nội không?</h4>
                                <span class="material-symbols-rounded" aria-hidden="true">add</span>
-                           </div>
-                           <div class="faq-answer">
+                           </button>
+                           <div id="faq-answer-4" class="faq-answer">
                                <p>Chúng tôi miễn phí giao xe trong bán kính 3km quanh khu vực Nguyễn Văn Cừ, Ngọc Lâm, Bồ Đề (Long Biên). Với các khu vực xa hơn hoặc giao sang Phố Cổ, chúng tôi tính phí ship hỗ trợ xăng xe cho nhân viên rất rẻ.</p>
                            </div>
                        </div>
+                       
                    </div>
                </div>
            </section>
@@ -1753,6 +1757,7 @@
                                </li>
                                <li>
                                    <span class="material-symbols-rounded" aria-hidden="true">support_agent</span>
+                                   <!-- Fix Target Blank -->
                                    <a href="https://zalo.me/0942467674" class="dynamic-zalo" id="contact-zalo" target="_blank" rel="noopener noreferrer">Chat Zalo: 0942 467 674</a>
                                </li>
                                <li>
@@ -1852,6 +1857,7 @@
                    
                    <div class="footer-col col-3">
                        <h4>Liên kết hữu ích</h4>
+                       <!-- Fix Target Blank Links -->
                        <ul class="footer-link-list">
                            <li><a href="#chinh-sach"><i class="fa-solid fa-chevron-right icon-nav" aria-hidden="true"></i> Điều khoản dịch vụ</a></li>
                            <li><a href="#bao-mat"><i class="fa-solid fa-chevron-right icon-nav" aria-hidden="true"></i> Chính sách bảo mật</a></li>
@@ -2163,18 +2169,26 @@
                });
            }
 
-           // 7. Module: FAQ Accordion
+           // 7. Module: FAQ Accordion - Đã Fix Logic Accessibility
            function initAccordion() {
                dom.faqItems.forEach(item => {
                    const question = item.querySelector('.faq-question');
                    if (question) {
                        question.addEventListener('click', () => {
+                           // Đóng các item khác
                            dom.faqItems.forEach(otherItem => {
                                if (otherItem !== item && otherItem.classList.contains('active')) {
                                    otherItem.classList.remove('active');
+                                   const otherQuestion = otherItem.querySelector('.faq-question');
+                                   if (otherQuestion) {
+                                       otherQuestion.setAttribute('aria-expanded', 'false');
+                                   }
                                }
                            });
-                           item.classList.toggle('active');
+                           
+                           // Toggle item hiện tại
+                           const isActive = item.classList.toggle('active');
+                           question.setAttribute('aria-expanded', isActive ? 'true' : 'false');
                        });
                    }
                });
@@ -2316,7 +2330,7 @@
                ThemeEngine.init();
                initMobileNav();
                initSmoothScroll();
-               initAccordion();
+               initAccordion(); // Đã bao gồm logic a11y mới
                initContactForm();
                initFloatingElements();
                initScrollAnimations();
