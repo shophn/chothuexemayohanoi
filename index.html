@@ -5,7 +5,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="view-transition" content="same-origin" />
    <meta name="google-site-verification" content="ocRxm-v9MI7IjTIejpfUl19S2_ERsMH9oyPkVVKNV8E" />
+   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
    
+   <!-- Preload LCP / Hero Resource -->
+   <link rel="preload" as="image" href="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/cropped-Thue-xe-may-min-1-1.png">
+
    <!-- CẤU HÌNH APP -->
    <script type="application/json" id="APP_CONFIG">
    {
@@ -68,7 +72,6 @@
    }
    </script>
 
-   <!-- Schema LocalBusiness: Thuê xe máy Nguyễn Tú -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -141,7 +144,6 @@
   ]
 }
 </script>
-<!-- End Schema LocalBusiness -->
 
    <!-- SEO META TAGS TỐI ƯU -->
    <title>Thuê Xe Máy Hà Nội | Thuê Xe Máy Nguyễn Tú</title>
@@ -1470,7 +1472,7 @@
        
        <header id="app-header">
            <a href="#trang-chu" class="logo-container" aria-label="Trang chủ Dịch vụ thuê xe máy Nguyễn Tú">
-               <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/cropped-Thue-xe-may-min-1-1.png" alt="Thuê xe máy Nguyễn Tú - Dịch vụ thuê xe máy Hà Nội" class="logo" id="app-logo">
+               <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/cropped-Thue-xe-may-min-1-1.png" alt="Thuê xe máy Nguyễn Tú - Dịch vụ thuê xe máy Hà Nội" width="40" height="40" fetchpriority="high" class="logo" id="app-logo">
                <span class="logo-text" id="app-title-text">Thuê xe Nguyễn Tú</span>
            </a>
            
@@ -1510,7 +1512,7 @@
                        <a href="#bang-gia" class="btn">
                            <i class="fa-solid fa-motorcycle"></i> Xem bảng giá ngay
                        </a>
-                       <a href="#" class="btn btn-secondary dynamic-tel" id="hero-call-btn">
+                       <a href="tel:0942467674" class="btn btn-secondary dynamic-tel" id="hero-call-btn">
                            <span class="material-symbols-rounded">call</span> Gọi đặt xe: 0942 467 674
                        </a>
                    </div>
@@ -1908,7 +1910,7 @@
    </button>
    
    <!-- Style Selector UI -->
-   <button id="style-selector-toggle" aria-label="Tùy chỉnh giao diện">
+   <button id="style-selector-toggle" aria-controls="style-selector-wrapper" aria-expanded="false" aria-label="Tùy chỉnh giao diện">
        <span class="material-symbols-rounded">palette</span>
    </button>
    <div id="style-selector-wrapper" class="card glass">
@@ -1955,7 +1957,7 @@
    <!-- SCRIPTS -->
    <script id="motoai-v36-script" src="https://example.com/motoai-v36.js" defer></script>
    
-   <script id="app-script" defer>
+   <script id="app-script">
    (function() {
        'use strict';
        
@@ -2032,7 +2034,6 @@
                    dom.appLogo.alt = `Logo ${CONFIG.TITLE}`;
                }
                if (CONFIG.TITLE && dom.appTitle) {
-                   // Logic cắt chuỗi cho tên logo
                    const titleWords = CONFIG.TITLE.split(' ').slice(0, 3).join(' ');
                    dom.appTitle.textContent = titleWords;
                }
@@ -2113,7 +2114,8 @@
                    
                    if (dom.styleToggle) {
                        dom.styleToggle.addEventListener('click', () => {
-                           dom.styleWrapper.classList.toggle('open');
+                           const isOpen = dom.styleWrapper.classList.toggle('open');
+                           dom.styleToggle.setAttribute('aria-expanded', isOpen);
                        });
                    }
                }
@@ -2299,7 +2301,6 @@
            try {
                initDynamicContent();
                
-               // Cập nhật text tĩnh
                if(dom.contactForm) {
                     const phoneInput = dom.contactForm.querySelector('#phone');
                     if (phoneInput) phoneInput.placeholder = CONFIG.PHONE;
@@ -2324,7 +2325,7 @@
    </script>
    
    <!-- Script từ hệ thống -->
-   <script src="https://shophn.github.io/chothuexemayohanoi/motoai_v37_6a_autositemap_pricing_lowfx.js"></script>
+   <script src="https://shophn.github.io/chothuexemayohanoi/motoai_v37_6a_autositemap_pricing_lowfx.js" defer></script>
 
 </body>
 </html>
