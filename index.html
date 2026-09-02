@@ -121,7 +121,7 @@
     "telephone": "+84942467674",
     "contactType": "customer service",
     "areaServed": "VN",
-    "availableLanguage": "Vietnamese"
+    "availableLanguage": ["vi"]
   },
   "sameAs": [
     "https://www.facebook.com/chothuexemaynguyentu",
@@ -147,7 +147,7 @@
    <title>Liên Hệ Thuê Xe Máy Long Biên - Nguyễn Tú | Giao Xe 15p | Giá Rẻ</title>
    <meta name="description" content="Liên hệ cho thuê xe máy Long Biên - Nguyễn Tú 0942467674. Giao xe tận nơi Long Biên, Hoàn Kiếm, Sân bay Nội Bài trong 15 phút. Xe mới, hỗ trợ 24/7." />
    <meta name="keywords" content="thuê xe máy Long Biên, thuê xe máy Hà Nội, thuê xe máy sân bay Nội Bài, thuê xe máy Nguyễn Văn Cừ, cho thuê xe máy" />
-   <meta name="author" content="Nguyễn Tú Motorbike Rental">
+   <meta name="author" content="Nguyễn Tú Motorbike Rental" />
    <link rel="canonical" href="https://shophn.github.io/chothuexemayohanoi/" />
    <link rel="icon" href="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/cropped-Thue-xe-may-min-1-1.png" type="image/png">
 
@@ -168,7 +168,9 @@
    <!-- FONTS & ICONS -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+   <!-- Preload Inter (onload pattern) -->
+   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet"></noscript>
    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
    <!-- Font Awesome -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -1005,6 +1007,74 @@
   <a class="skip-link" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Bỏ qua menu</a>
 
   <!-- Rest of the body remains unchanged -->
+
+  <!-- Accessibility & Performance helpers: images (alt/dimensions) and noopener enforcement -->
+  <script>
+  // Ensure every image has alt + width/height or a fallback aspect-ratio to reduce CLS
+  (function(){
+    function applyImageFixes() {
+      const siteTitle = (document.querySelector('title') && document.querySelector('title').textContent.trim()) || 'Cho thuê xe máy Nguyễn Tú';
+      document.querySelectorAll('img').forEach(img => {
+        try {
+          // ALT
+          if (!img.hasAttribute('alt') || img.getAttribute('alt').trim() === '') {
+            let src = img.currentSrc || img.src || '';
+            let name = '';
+            try { name = src.split('/').pop().split(/[?#]/)[0].replace(/[-_]/g,' ').replace(/\.[a-zA-Z0-9]+$/,''); } catch(e){}
+            img.setAttribute('alt', name ? `${siteTitle} - ${name}` : siteTitle);
+          }
+          // Dimensions or aspect-ratio
+          function setDims() {
+            if ((!img.hasAttribute('width') || !img.hasAttribute('height')) && img.naturalWidth && img.naturalHeight) {
+              img.setAttribute('width', img.naturalWidth);
+              img.setAttribute('height', img.naturalHeight);
+              img.style.aspectRatio = '';
+            } else {
+              if (!img.style.aspectRatio && (!img.hasAttribute('width') || !img.hasAttribute('height'))) {
+                if (img.dataset && img.dataset.aspectRatio) {
+                  img.style.aspectRatio = img.dataset.aspectRatio;
+                } else {
+                  img.style.aspectRatio = '16/9';
+                }
+                if (getComputedStyle(img).display === 'inline') img.style.display = 'block';
+              }
+            }
+          }
+          if (img.complete) setDims(); else img.addEventListener('load', setDims, {once:true});
+          setTimeout(setDims, 1500);
+        } catch(e) { /* silent */ }
+      });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', applyImageFixes); else applyImageFixes();
+  })();
+
+  // Ensure target="_blank" links include rel="noopener noreferrer"
+  (function(){
+    function normalizeRel(el) {
+      if (!el) return;
+      if (el.target && el.target.toLowerCase() === '_blank') {
+        let rel = (el.getAttribute('rel') || '').split(/\s+/).filter(Boolean);
+        if (!rel.includes('noopener')) rel.push('noopener');
+        if (!rel.includes('noreferrer')) rel.push('noreferrer');
+        el.setAttribute('rel', rel.join(' '));
+      }
+    }
+    document.querySelectorAll('a[target="_blank"]').forEach(normalizeRel);
+    if (window.MutationObserver) {
+      const mo = new MutationObserver(mutations => {
+        for (const m of mutations) {
+          m.addedNodes && m.addedNodes.forEach(node => {
+            if (node.nodeType === 1) {
+              if (node.matches && node.matches('a[target="_blank"]')) normalizeRel(node);
+              node.querySelectorAll && node.querySelectorAll('a[target="_blank"]').forEach(normalizeRel);
+            }
+          });
+        }
+      });
+      mo.observe(document.documentElement || document.body, {childList:true, subtree:true});
+    }
+  })();
+  </script>
 
 </body>
 </html>
